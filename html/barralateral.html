@@ -1,0 +1,169 @@
+<div class="col-md-3">
+		
+				<!-- CATEGORIAS -->
+				<div class="panel-group">
+				  <div class="panel panel-default">
+					<div class="panel-heading">
+					  <h4 class="panel-title">
+						<a data-toggle="collapse" href="#collapse2">Generos</a>
+					  </h4>
+					</div>
+					<div id="collapse2" class="panel-collapse collapse in">
+						<div class="list-group">
+							<a href="catalogo.php?genero=acao" class="list-group-item">Ação</a>
+							<a href="catalogo.php?genero=aventura" class="list-group-item">Aventura</a>
+							<a href="catalogo.php?genero=animacao" class="list-group-item">Animação</a>
+							<a href="catalogo.php?genero=comedia" class="list-group-item">Comédia</a>
+							<a href="catalogo.php?genero=documentario" class="list-group-item">Documentário</a>
+							<a href="catalogo.php?genero=fantasia" class="list-group-item">Fantasia</a>
+							<a href="catalogo.php?genero=ficcao" class="list-group-item">Ficção Científica</a>
+							<a href="catalogo.php?genero=musical" class="list-group-item">Musical</a>
+							<a href="catalogo.php?genero=romance" class="list-group-item">Romance</a>
+							<a href="catalogo.php?genero=suspense" class="list-group-item">Suspense</a>
+							<a href="catalogo.php?genero=terror" class="list-group-item">Terror</a>
+						</div>
+					</div>
+				  </div>
+				</div>
+				
+				
+                <form action="catalogo.php">
+					<!-- BUSCA -->
+					<div class="form-group">
+							<label for="usr" >Busca</label>
+							<span class="glyphicon glyphicon-search"></span>
+							<input type="text" name="busca" class="form-control" id="usr">
+					</div>
+					
+					
+					<!-- ORDENACAO (CRITERIO)-->
+					<div class="form-group">
+					 Ordenar por: 
+					  <select name="criterio" class="form-control" id="sel1" onchange="this.form.submit()">
+						<option value="alfabetica">Ordem Alfabética</option>
+						<option value="avaliacoes">Avaliações</option>
+						<option value="visualizacoes">Visualizações</option>
+						<option value="duracao">Tempo de Filme</option>
+					  </select>
+					  
+					  <!-- ORDENACAO (CRESCENTE OU DECRESCENTE)-->
+					  <select name="ordem" class="form-control" id="sel1" onchange="this.form.submit()">
+						<option value="True">Crescente</option>
+						<option value="">Decrescente</option>
+					  </select>
+					</div>
+				</form>
+				
+				<!-- PESQUISA AVANÇADA-->
+				<form action="catalogo.php">
+				<div class="panel-group">
+				  <div class="panel panel-default">
+					<div class="panel-heading">
+					  <h4 class="panel-title">
+						<a data-toggle="collapse" href="#collapse1">Busca Avançada</a>
+					  </h4>
+					</div>
+					<div id="collapse1" class="panel-collapse collapse">
+						<div class="panel-body">
+							<!-- Elenco -->
+							<div class="form-group">
+								<label for="usr">Elenco:</label>
+								<input type="text" class="form-control" id="usr" name="elenco">
+							</div>
+							
+							<!-- Direção -->
+							<div class="form-group">
+								<label for="usr">Direção:</label>
+								<input type="text" class="form-control" id="usr" name="direcao">
+							</div>
+
+			
+							<!-- Genero-->
+							<div class="form-group">
+								<label for="pwd">Gênero:</label>
+								<select name="genero" class="form-control" id="sel1" multiple>
+									<option value="Ação">Ação</option>
+									<option value="Aventura">Aventura</option>
+									<option value="Animação">Animação</option>
+									<option value="Comédia">Comédia</option>
+									<option value="Documentário">Documentário</option>
+									<option value="Fantasia">Fantasia</option>
+									<option value="Ficção">Ficção Científica</option>
+									<option value="Musical">Musical</option>
+									<option value="Romance">Romance</option>
+									<option value="Suspence">Suspence</option>
+									<option value="Terror">Terror</option>
+								</select>
+							</div>
+							<!-- Idioma-->
+							<div class="form-group">
+								<label for="pwd">Idioma:</label>
+								<input type="text" class="form-control" id="pwd"  name="idioma">
+							</div>
+							
+							<!-- País-->
+							<div class="form-group">
+								<label for="pwd">País:</label>
+								<input type="text" class="form-control" id="pwd"  name="pais">
+							</div>
+							
+							<!-- Duração-->
+							<div class="form-group">
+								<label for="pwd">Duração:</label>
+								<select name="duracao" class="form-control" id="sel1">
+									<option>Todos</option>
+									<option value="curto">Curta (0 a 30 min)</option>
+									<option value="medio">Média (31 a 120 min)</option>
+									<option value="longo">Longa (121 para cima)</option>
+								</select>
+							</div>
+							
+							<!-- Ano-->
+							<div class="form-group">
+								<label for="pwd">Ano:</label>
+								<select name="ano" class="form-control" id="sel1">
+									<option>Todos</option>
+									<option value="antigo">Antigo (Antes de 1975)</option>
+									<option value="medio">Médio (entre 1975 e 2000)</option>
+									<option value="recente">Recente (depois de 2000)</option>
+								</select>
+							</div>
+							
+							<!-- Avaliação-->
+							<div class="form-group">
+								<label for="pwd">Avaliação:</label>
+								<select name="avaliacao" class="form-control" id="sel1">
+									<option>Todos</option>
+									<option value="ruins">Ruins (0 ou 1 estrela)</option>
+									<option value="medios">Médios (2 ou 3 estrelas)</option>
+									<option value="melhores">Melhores (4 ou 5 estrelas)</option>
+								</select>
+							</div>	
+							
+							
+							<!-- Visualização-->
+							<div class="form-group">
+								<label for="pwd">Visualização:</label>
+								<select name="visualizacao" class="form-control" id="sel1">
+									<option>Todos</option>
+									<option value="50mais"> 50% Mais Vistos </option>
+									<option value="20mais"> 20% Mais Vistos </option>
+									<option value="5mais">5% Mais Vistos</option>
+								</select>
+							</div>
+							
+							
+							<div class="form-group">
+								<input type="submit" value="Buscar"></input>
+							</div>
+						
+						
+						</form>
+					  
+					  </div>
+					</div>
+				  </div>
+				</div>
+                </form>
+				
+            </div>
